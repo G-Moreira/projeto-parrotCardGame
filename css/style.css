@@ -17,14 +17,15 @@ h1 {
     margin: 40px 15px 47px 15px;
 }
 
-.game {
+.jogo {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     width: 80%;
     margin: 0 auto;
 }
-.card {
+
+.carta {
     width: 117px;
     height: 146px;
     background-color: #A7E9AF;
@@ -39,12 +40,24 @@ h1 {
     margin: 17px;
 }
 
-.card img {
+.carta img {
     width: 100px;
 }
 
+.carta-frente {
+    display: block;
+}
+
+.carta-tras {
+    display: block;
+}
+
+.esconder {
+    display: none;
+}
+
 @media (max-width:767px) {
-    .game {
+    .jogo {
         flex-direction: column;
         align-items: center;
     }
