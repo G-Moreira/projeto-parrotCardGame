@@ -18,42 +18,71 @@ h1 {
 }
 
 .jogo {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     width: 80%;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .carta {
     width: 117px;
     height: 146px;
+    margin: 17px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    transition: all 1s;
+}
+
+.carta div {
+    position: absolute;
+    width: 117px;
+    height: 146px;
+
     background-color: #A7E9AF;
-    
+
     display: flex;
     align-items: center;
     justify-content: center;
 
     border: 1px solid #99CEA8;
     border-radius: 5px;
-
-    margin: 17px;
+    
 }
 
-.carta img {
+.carta div img{
     width: 100px;
+    height: 100px;
 }
 
 .carta-frente {
-    display: block;
+    visibility: visible;
+    transform: rotateY(180deg);
 }
 
 .carta-tras {
-    display: block;
+    visibility: visible;
+}
+
+.carta-tras {
+    visibility: visible;
 }
 
 .esconder {
-    display: none;
+    visibility: hidden;
+    transition: all .3s;
+}
+
+.carta-tras:hover {
+    cursor: pointer;
+}
+
+.virar-carta {
+    transform: rotateY(180deg);
 }
 
 @media (max-width:767px) {
