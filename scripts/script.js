@@ -77,6 +77,8 @@ function compararCartas(){
         qtdAcertos++;
     }
     clicarDisponivel = true;
+
+    fimDoJogo();
 }
 
 function virarCarta(parteTras){
@@ -104,6 +106,9 @@ function virarCarta(parteTras){
     }
 } 
 
-
-
-
+// Verificar em cada clique se a qtd de pares acertados é metade da qtd de cartas no jogo 
+function fimDoJogo(){
+    if(qtdAcertos === qtdCartas/2){
+        alert(`Você ganhou em ${qtdJogadas} jogadas!`);
+    }
+}
