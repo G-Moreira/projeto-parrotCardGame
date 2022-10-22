@@ -99,7 +99,7 @@ function virarCarta(parteTras){
         // A cada duas cartas verificar se são iguais ou diferentes
         if( qtdJogadas % 2 === 0 ){
             clicarDisponivel = false;
-            setTimeout(compararCartas,2000);
+            setTimeout(compararCartas,1400);
         }
     } else {
         return;
